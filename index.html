@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1584593744969-4731ae13ef24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-repeat: none;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 6px;
+}
+
+#description {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+#container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.form-wrap {
+  background: rgba(133, 146, 158, 0.2);
+  padding: 35px;
+  border-radius: 5px;
+}
+
+.form-wrap .form-group {
+  margin-top: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+#name, #email, #number, #dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type=radio], input[type=checkbox] {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.spam {
+  font-size: 14px;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  resize: none;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #49c1a2;
+}
+
+button:hover {
+  background: #37a08e;
+}
+    </style>
+</head>
+<body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+  <p id="description">Thank you for taking the time to help us improve the platform</p>
+  <div id="container">
+    <div class="form-wrap">
+      <form id="survey-form">
+        
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="number" id="number-label">Age(<spam class="spam">optional</spam>)</label>
+        <input type="number" id="number" name="number" placeholder="Age" min="1" max="125">
+        </div>
+        
+        <div class="form-group">
+          <label>Which option best describes your current role?</label>
+          <select id="dropdown">
+            <option selected disabled>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferno">Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Would you recommend freeCodeCamp to a friend?</label>
+          <label><input type="radio" name="radio-buttons" value="definitely">Definitely</label>
+          <label><input type="radio" name="radio-buttons" value="maybe">May be</label>
+          <label><input type="radio" name="radio-buttons" value="notSure">Not sure</label>
+        </div>
+        
+        <div class="form-group">
+          <label>What is your favorite feature of freeCodeCamp?</label>
+          <select id="dropdown">
+            <option selected disabled>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="Community">Community</option>
+            <option value="opensource">Open Source</option>
+          </select>
+         </div>
+        
+        <div class="form-group">
+          <label>What would you like to see improved? (<spam class="spam">Check all that apply</spam>)</label>
+          <label><input type="checkbox" name="like" value="definitely">Definitely</label>
+          <label><input type="checkbox" name="like" value="front-end">Front-end Projects</label>
+          <label><input type="checkbox" name="like" value="back-end">Back-end Projects</label>
+          <label><input type="checkbox" name="like" value="visualisation">Data Visualisation</label>
+          <label><input type="checkbox" name="like" value="challenges">Challenges</label>
+          <label><input type="checkbox" name="like" value="open source community">Open Source Community</label>
+          <label><input type="checkbox" name="like" value="gitterRooms">Gitter help rooms</label>
+          <label><input type="checkbox" name="like" value="videos">Videos</label>
+          <label><input type="checkbox" name="like" value="cityMeetups">City Meetups</label>
+          <label><input type="checkbox" name="like" value="wiki">Wiki</label>
+          <label><input type="checkbox" name="like" value="forum">Forum</label>
+          <label><input type="checkbox" name="like" value="additionalCourses">Additional Courses</label>
+        </div>
+        
+        <div class="form-group">
+          <label>Any comments or suggestions?</label>
+          <textarea placeholder="Enter your comment here..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <button id="submit">Submit</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</body>
+</html>
